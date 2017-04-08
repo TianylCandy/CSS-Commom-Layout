@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <title>CSS常见布局</title>
+    <style>
+body{
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    font-size: 14px;
+    font-family: "Microsoft Yahei";
+    color: #333；
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+li{
+    list-style-type:none;
+}
+.clearfix:after{
+content: '';
+display: block;
+clear: both;
+}
+.container{
+    width::100%;
+    position: relative;
+}
+.nav{
+    text-align: center;
+    margin: 30px 0;
+}
+.nav h3{
+    font-size: 18px;
+}
+.nav ul {
+    margin-top: 20px;
+}
+
+.nav ul li{
+display: inline-block;
+height: 24px;
+line-height: 24px;
+padding: 10px;
+margin-right: 10px;
+border: 1px solid #fff;
+}
+.nav li a:hover{
+    color: #249FF1;
+}
+.main{
+    width: 1000px;
+    margin: 0 auto;
+}
+.header,.footer{
+    height: 40px;
+    background:#FFC0CB;
+}
+.content{
+    overflow:auto;
+    border:1px solid #ccc;
+}
+.center-side{
+    width: 100%;
+    float:left;
+
+}
+.center-side .wrap{
+    height: 400px;
+    background: #AEEEEE;
+    margin-left: 160px;
+    margin-right: 200px;
+}
+ .left-side {
+    width:160px;
+    height:400px;
+    background:#CAFF70;
+     float:left;
+    margin-left:-100%;
+           }
+.right-side {
+    width:200px;
+    height:400px;
+    background:#CD7DC1;
+    float:left;
+    margin-left:-200px;
+           }
+
+    </style>
+    <body>
+      <div class='container'>
+            <div class='nav'>
+                <h3>CSS常见布局</h3>
+                <ul class='clearfix'>
+                    <li><a href='index.html'>圣杯布局</a></li>
+                    <li><a href='index2.html'>双飞翼布局</a></li>                  
+                </ul>
+            </div>
+            <div class="main">
+                <div class="header">头部</div>
+            <div class="content">
+                <div class="center-side">
+                <div class="wrap">
+                     <p>双飞翼布局：利用浮动和负margin实现三栏布局。在三栏布局的中间栏中加一个新的元素。给该元素设置合适的margin值来解决左右栏的遮盖问题。 其流程如下：</p>
+                    <ul>
+                        <li>（1）创建父元素并包裹三个浮动的子元素，左右边栏固定宽度。</li>
+                        <li>（2） 设定左右栏负边距，使左右栏显示在中间栏两侧。 </li>
+                        <li>（3）在中间栏中内部添加子元素，设置子元素左右边距等于左右栏的宽度。</li>
+                    </ul>
+                </div>
+                   
+                </div>
+                    <div class='left-side'>左侧边栏</div>
+                    <div class='right-side'>右侧边栏</div>
+             </div>
+                <div class="footer">尾部</div>
+            </div>
+       </div>
+    </body>
+</html>
